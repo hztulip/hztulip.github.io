@@ -121,7 +121,7 @@ var data = {
 	otherData: {
 		myData: {
 			grade:0,
-			level: 1
+			level: 0
 		},
 		direct: {
 			nodes: 0,
