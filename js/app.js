@@ -511,6 +511,7 @@ var app = new Vue({
 				_this.income.unsettled.eth = result[1][0] / 10 ** 18;
 				_this.income.gameReward.eth = result[1][1] / 10 ** 18;
 				_this.income.gameReward.sdf = result[1][2] / 10 ** 8;
+				_this.income.list.dynamic.total=result[1][3] / (10 ** 18);
 
 				console.log(result + " at getRewardInfo");
 				console.log(result[1] + " at result[1]")
@@ -536,7 +537,7 @@ var app = new Vue({
 				_this.gameData.currentTimes = parseInt(result[6]);
 				_this.gameData.bonusPool = result[7] / (10 ** 18);
 
-                _this.income.list.dynamic.total=result[1][3] / (10 ** 18);
+                
 
 			}).catch(function(err) {
 				console.log(err.message + " at gameGetInfo Error");
