@@ -120,7 +120,7 @@ var app = new Vue({
 		jsonData:function(n){
 			var _this=this;
 			if(_this.playerID==0)return;
-			$.getJSON(n[0]+n[1]+'.json', function(data) {
+			$.getJSON(n[0]+n[1]+'.json?t='+Math.random(), function(data) {
 				console.log(data[""+_this.playerID] +"at jsonData")
 				_this.rankData.direct.achievement =data[""+_this.playerID][0];
 				_this.rankData.direct.rank =data[""+_this.playerID][1];
